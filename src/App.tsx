@@ -1,11 +1,13 @@
-import React from 'react';
+import React from "react";
+import { ThemeProvider } from "@mui/material/styles";
+import { theme } from "./theme";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      Website
-    </div>
+    <ThemeProvider theme={theme}>
+      <div></div>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
