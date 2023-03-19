@@ -7,7 +7,12 @@ const Layout: React.FC<any> = () => {
   return (
     <Box>
       <Stack direction="row">
-        <Box sx={{ backgroundColor: "lightblue", flex: "95%", padding: "2px" }}>
+        <Box
+          sx={{
+            flex: "95%",
+            padding: "2px",
+          }}
+        >
           <Outlet />
         </Box>
         <SideBar />

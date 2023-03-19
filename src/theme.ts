@@ -10,4 +10,17 @@ export const theme = createTheme({
       main: green[500],
     },
   },
+  components: {
+    MuiIconButton: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "#f0f0e8",
+          "&:hover": {
+            backgroundColor: "#ffcc00", // set the hover color here
+            color: "white",
+          },
+        },
+      },
+    },
+  },
 });
