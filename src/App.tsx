@@ -3,12 +3,11 @@ import { ThemeProvider } from "@mui/material/styles";
 import { theme } from "./theme";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./routes";
-import { CircularProgress } from "@mui/material";
+import { PageLoader } from "./components/Common";
 
 const App: React.FC = () => {
   return (
-    //TODO add nice Loading
-    <Suspense fallback={<CircularProgress />}>
+    <Suspense fallback={<PageLoader />}>
       <ThemeProvider theme={theme}>
         <RouterProvider router={router} />
       </ThemeProvider>

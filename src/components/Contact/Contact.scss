@@ -1,0 +1,31 @@
+.contact-container {
+  height: calc(100vh - 47px);
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.flex-item-left {
+  padding: 40px;
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.flex-item-right {
+  padding: 10px;
+  flex: 40%;
+}
+
+/* Responsive layout - makes a one column-layout instead of a two-column layout */
+@media (max-width: 800px) {
+  .flex-item-right,
+  .flex-item-left {
+    flex: 95%;
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-wrap: wrap;
+}

@@ -1,6 +1,14 @@
-.home {
-  height: 100vh;
+.home-container {
+  height: calc(100vh - 47px);
+  flex-wrap: wrap;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
+  .box-item {
+    display: flex;
+    flex: 1 0 50%;
+    min-width: 250px;
+    justify-content: center;
+    align-items: center;
+  }
 }

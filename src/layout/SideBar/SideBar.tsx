@@ -7,21 +7,23 @@ import {
   Stack,
   ListItemButton,
   styled,
+  useMediaQuery,
 } from "@mui/material";
 import { RouteConfigs, IRouteConfigs } from "./routesConfig";
 import { useLocation, useNavigate } from "react-router-dom";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import "./SideBar.scss";
-import { BarItem } from "../../constants";
 
 const SideBar: React.FC = () => {
   const navigation = useNavigate();
   let location = useLocation();
   const [isSunny, setIsSunny] = useState<boolean>(true);
-  console.log(location);
+  const isSmallScreen = useMediaQuery((theme: any) =>
+    theme.breakpoints.down("sm")
+  );
 
-  const $ListItemButton = styled(ListItemButton)(() => ({
+  const $ListItemButton = styled(ListItemButton)(({ theme }) => ({
     borderRadius: "50px",
     justifyContent: "flex-end",
     marginBottom: "20px",
@@ -39,6 +41,9 @@ const SideBar: React.FC = () => {
     },
     "&.Mui-selected .list-item-text": {
       display: "block",
+    },
+    [theme.breakpoints.down("sm")]: {
+      maxWidth: "40px",
     },
   }));
 
@@ -62,8 +67,14 @@ const SideBar: React.FC = () => {
             onClick={() => handleClick(path)}
             selected={getSelectedListItem(path)}
           >
-            <ListItemText primary={name} className="list-item-text" />
-            {icon}
+            {isSmallScreen ? (
+              icon
+            ) : (
+              <>
+                <ListItemText primary={name} className="list-item-text" />
+                {icon}
+              </>
+            )}
           </$ListItemButton>
         ))}
       </List>
@@ -74,7 +85,7 @@ const SideBar: React.FC = () => {
       sx={{
         flex: "5%",
         padding: "2px",
-        minWidth: "130px",
+        minWidth: `${isSmallScreen ? "70px" : "130px"}`,
       }}
     >
       <Stack
