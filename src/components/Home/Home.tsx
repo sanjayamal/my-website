@@ -10,7 +10,6 @@ import {
   styled,
 } from "@mui/material";
 import ForwardOutlinedIcon from "@mui/icons-material/ForwardOutlined";
-import pic from "../../assets/images/profilePic.jpg";
 import { useNavigate } from "react-router-dom";
 import "./Home.scss";
 import { ButtonWithIcon, WithLoad } from "../Common";
@@ -28,10 +27,19 @@ const Home: React.FC = () => {
   return (
     <Box className="home-container">
       <Box className="box-item">
-        <Card sx={{ maxWidth: 350, borderRadius: "25px" }}>
+        <Card
+          sx={{
+            maxWidth: 350,
+            borderRadius: "25px",
+            borderTop: 1,
+            borderBottom: 1,
+            borderColor: "#ffcc00",
+            borderWidth: "6px",
+          }}
+        >
           <CardMedia
             sx={{ height: "100%", objectFit: "cover" }}
-            image={pic}
+            image={`${process.env.PUBLIC_URL}/assets/images/profilePic.jpg`}
             component="img"
           />
         </Card>
