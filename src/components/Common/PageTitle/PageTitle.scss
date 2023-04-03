@@ -1,0 +1,26 @@
+.page-title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Nunito", sans-serif;
+  background-color: #ffff;
+  overflow: hidden;
+}
+
+.box-title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: #ffff;
+  font-size: 5vw;
+  font-weight: 550;
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 10px #ffcc00, 0 0 15px #ffcc00, 0 0 20px #ffcc00,
+    0 0 40px #ffcc00;
+}

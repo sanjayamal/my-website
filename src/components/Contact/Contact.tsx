@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { ButtonWithIcon, WithLoad } from "../Common";
+import { ButtonWithIcon, PageTitle, WithLoad } from "../Common";
 import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
 import {
   Alert,
@@ -100,189 +100,194 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <Box className="contact-container">
-      <Box className="flex-item-left">
-        <Box
-          component="form"
-          className="contact-form"
-          onSubmit={handleSubmit(onSubmit)}
-          ref={ref}
-        >
-          <Grid container spacing={1}>
-            <Grid item xs={12} sm={6}>
-              <Controller
-                name="email"
-                control={control}
-                rules={{
-                  required: true,
-                  pattern: {
-                    value: /\S+@\S+\.\S+/,
-                    message: "Please enter a valid email address",
-                  },
-                }}
-                render={({ field }) => (
-                  <$TextField
-                    {...field}
-                    label="Email"
-                    error={!!errors.email}
-                    helperText={
-                      errors.email ? (errors.email.message as string) : ""
-                    }
-                    fullWidth
-                  />
-                )}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <Controller
-                name="name"
-                control={control}
-                rules={{ required: true }}
-                render={({ field }) => (
-                  <$TextField
-                    {...field}
-                    label="Name"
-                    error={!!errors.name}
-                    helperText={errors.name ? "Please enter your name" : ""}
-                    fullWidth
-                  />
-                )}
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <Controller
-                name="subject"
-                control={control}
-                rules={{ required: true }}
-                render={({ field }) => (
-                  <$TextField
-                    {...field}
-                    label="Subject"
-                    error={!!errors.subject}
-                    helperText={
-                      errors.subject ? "Please enter the subject" : ""
-                    }
-                    fullWidth
-                  />
-                )}
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <Controller
-                name="message"
-                control={control}
-                rules={{ required: true }}
-                render={({ field }) => (
-                  <$TextField
-                    {...field}
-                    label="Message"
-                    error={!!errors.message}
-                    helperText={
-                      errors.message ? "Please enter your message" : ""
-                    }
-                    multiline
-                    rows={5}
-                    fullWidth
-                  />
-                )}
-              />
-            </Grid>
-            <Grid
-              item
-              xs={12}
-              sx={{ display: "flex", justifyContent: "flex-end" }}
-            >
-              <ButtonWithIcon
-                variant="outlined"
-                type="submit"
-                endIcon={
-                  <$IconButton aria-label="send">
-                    <SendOutlinedIcon />
-                  </$IconButton>
-                }
-              >
-                Send
-              </ButtonWithIcon>
-            </Grid>
-          </Grid>
-        </Box>
-      </Box>
-      <Box className="flex-item-right">
-        <Stack spacing={2}>
-          <Box>
-            <Chip
-              icon={
-                <LocationOnOutlinedIcon sx={{ color: "rgba(0, 0, 0, 0.54)" }} />
-              }
-              label="ADDRESS"
-              variant="outlined"
-              sx={{ color: "#ffcc00", border: "none", fontSize: "18px" }}
-            />
-            <Typography className="info-item">
-              Palagaspalatha, Parappuwa,
-            </Typography>
-            <Typography className="info-item">Kosgoda</Typography>
-            <Typography className="info-item">Sri Lanka</Typography>
-          </Box>
-          <Box>
-            <Chip
-              icon={<EmailOutlinedIcon sx={{ color: "red" }} />}
-              label="MAIL ME"
-              variant="outlined"
-              sx={{ color: "#ffcc00", border: "none", fontSize: "18px" }}
-            />
-            <Typography className="info-item">
-              rajithasanjayamal0918@gmail.com
-            </Typography>
-          </Box>
-          <Box>
-            <Chip
-              icon={<CallOutlinedIcon />}
-              label="CALL ME"
-              variant="outlined"
-              sx={{ color: "#ffcc00", border: "none", fontSize: "18px" }}
-            />
-            <Typography className="info-item">
-              +94717084765 / +94773664768
-            </Typography>
-          </Box>
+    <>
+      <PageTitle title="GET IN TOUCH" />
+      <Box className="contact-container">
+        <Box className="flex-item-left">
           <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              paddingTop: "20px",
-            }}
+            component="form"
+            className="contact-form"
+            onSubmit={handleSubmit(onSubmit)}
+            ref={ref}
           >
-            <Stack direction="row" spacing={3}>
-              {socialMedia.map(
-                (
-                  { icon, link }: { icon: any; link: string },
-                  index: number
-                ) => (
-                  <a key={index} href={link}>
-                    {icon}
-                  </a>
-                )
-              )}
-            </Stack>
+            <Grid container spacing={1}>
+              <Grid item xs={12} sm={6}>
+                <Controller
+                  name="email"
+                  control={control}
+                  rules={{
+                    required: true,
+                    pattern: {
+                      value: /\S+@\S+\.\S+/,
+                      message: "Please enter a valid email address",
+                    },
+                  }}
+                  render={({ field }) => (
+                    <$TextField
+                      {...field}
+                      label="Email"
+                      error={!!errors.email}
+                      helperText={
+                        errors.email ? (errors.email.message as string) : ""
+                      }
+                      fullWidth
+                    />
+                  )}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <Controller
+                  name="name"
+                  control={control}
+                  rules={{ required: true }}
+                  render={({ field }) => (
+                    <$TextField
+                      {...field}
+                      label="Name"
+                      error={!!errors.name}
+                      helperText={errors.name ? "Please enter your name" : ""}
+                      fullWidth
+                    />
+                  )}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <Controller
+                  name="subject"
+                  control={control}
+                  rules={{ required: true }}
+                  render={({ field }) => (
+                    <$TextField
+                      {...field}
+                      label="Subject"
+                      error={!!errors.subject}
+                      helperText={
+                        errors.subject ? "Please enter the subject" : ""
+                      }
+                      fullWidth
+                    />
+                  )}
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <Controller
+                  name="message"
+                  control={control}
+                  rules={{ required: true }}
+                  render={({ field }) => (
+                    <$TextField
+                      {...field}
+                      label="Message"
+                      error={!!errors.message}
+                      helperText={
+                        errors.message ? "Please enter your message" : ""
+                      }
+                      multiline
+                      rows={5}
+                      fullWidth
+                    />
+                  )}
+                />
+              </Grid>
+              <Grid
+                item
+                xs={12}
+                sx={{ display: "flex", justifyContent: "flex-end" }}
+              >
+                <ButtonWithIcon
+                  variant="outlined"
+                  type="submit"
+                  endIcon={
+                    <$IconButton aria-label="send">
+                      <SendOutlinedIcon />
+                    </$IconButton>
+                  }
+                >
+                  Send
+                </ButtonWithIcon>
+              </Grid>
+            </Grid>
           </Box>
-        </Stack>
-      </Box>
-      <Snackbar
-        open={alert.isOpen}
-        autoHideDuration={6000}
-        onClose={handleClose}
-        anchorOrigin={{ vertical: "top", horizontal: "right" }}
-      >
-        <Alert
+        </Box>
+        <Box className="flex-item-right">
+          <Stack spacing={2}>
+            <Box>
+              <Chip
+                icon={
+                  <LocationOnOutlinedIcon
+                    sx={{ color: "rgba(0, 0, 0, 0.54)" }}
+                  />
+                }
+                label="ADDRESS"
+                variant="outlined"
+                sx={{ color: "#ffcc00", border: "none", fontSize: "18px" }}
+              />
+              <Typography className="info-item">
+                Palagaspalatha, Parappuwa,
+              </Typography>
+              <Typography className="info-item">Kosgoda</Typography>
+              <Typography className="info-item">Sri Lanka</Typography>
+            </Box>
+            <Box>
+              <Chip
+                icon={<EmailOutlinedIcon sx={{ color: "red" }} />}
+                label="MAIL ME"
+                variant="outlined"
+                sx={{ color: "#ffcc00", border: "none", fontSize: "18px" }}
+              />
+              <Typography className="info-item">
+                rajithasanjayamal0918@gmail.com
+              </Typography>
+            </Box>
+            <Box>
+              <Chip
+                icon={<CallOutlinedIcon />}
+                label="CALL ME"
+                variant="outlined"
+                sx={{ color: "#ffcc00", border: "none", fontSize: "18px" }}
+              />
+              <Typography className="info-item">
+                +94717084765 / +94773664768
+              </Typography>
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                paddingTop: "20px",
+              }}
+            >
+              <Stack direction="row" spacing={3}>
+                {socialMedia.map(
+                  (
+                    { icon, link }: { icon: any; link: string },
+                    index: number
+                  ) => (
+                    <a key={index} href={link}>
+                      {icon}
+                    </a>
+                  )
+                )}
+              </Stack>
+            </Box>
+          </Stack>
+        </Box>
+        <Snackbar
+          open={alert.isOpen}
+          autoHideDuration={6000}
           onClose={handleClose}
-          severity={alert.severity}
-          sx={{ width: "100%" }}
+          anchorOrigin={{ vertical: "top", horizontal: "right" }}
         >
-          {alert.message}
-        </Alert>
-      </Snackbar>
-    </Box>
+          <Alert
+            onClose={handleClose}
+            severity={alert.severity}
+            sx={{ width: "100%" }}
+          >
+            {alert.message}
+          </Alert>
+        </Snackbar>
+      </Box>
+    </>
   );
 };
 

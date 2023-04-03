@@ -1,15 +1,20 @@
 import React from "react";
-import { WithLoad } from "../Common";
-import { Box, Stack } from "@mui/material";
+import { PageTitle, WithLoad } from "../Common";
+import { Stack } from "@mui/material";
 import { PersonalInfo } from "./PersonalInfo";
 import { Skills } from "./Skills";
+import { EducationAndExperiance } from "./EducationAndExperiance";
 
 const About: React.FC = () => {
   return (
-    <Stack spacing={3}>
-      <PersonalInfo />
-      <Skills />
-    </Stack>
+    <>
+      <PageTitle title="ABOUT ME" />
+      <Stack spacing={3}>
+        <PersonalInfo />
+        <Skills />
+        <EducationAndExperiance />
+      </Stack>
+    </>
   );
 };
 

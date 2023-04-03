@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { CardSkeleton, WithLoad } from "../Common";
+import { CardSkeleton, PageTitle, WithLoad } from "../Common";
 import { IMediumItem } from "./Interfaces";
 
 const MEDIUM_URL =
@@ -47,41 +47,44 @@ const Blogs: React.FC = () => {
   };
 
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexWrap: "wrap",
-        gap: "10px",
-        margin: "10px",
-        paddingLeft: "125px",
-      }}
-    >
-      {isLoading && <CardSkeleton />}
-      {items.map(({ title, thumbnail, link }: IMediumItem, index: number) => (
-        <Card
-          sx={{ width: "250px", backgroundColor: "#f0f0e8", height: "auto" }}
-          key={index}
-          onClick={() => onClick(link)}
-        >
-          <CardActionArea>
-            <Box sx={{ width: "250px", height: "150px", overflow: "hidden" }}>
-              <CardMedia
-                component="img"
-                height="auto"
-                image={thumbnail}
-                alt="No Image"
-                sx={{ width: "100%", height: "100%", objectFit: "cover" }}
-              />
-            </Box>
-            <CardContent>
-              <Typography gutterBottom variant="h6" component="div">
-                {title}
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-      ))}
-    </Box>
+    <>
+      <PageTitle title="MY BLOGS" />
+      <Box
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          gap: "10px",
+          margin: "10px",
+          paddingLeft: "125px",
+        }}
+      >
+        {isLoading && <CardSkeleton />}
+        {items.map(({ title, thumbnail, link }: IMediumItem, index: number) => (
+          <Card
+            sx={{ width: "250px", backgroundColor: "#f0f0e8", height: "auto" }}
+            key={index}
+            onClick={() => onClick(link)}
+          >
+            <CardActionArea>
+              <Box sx={{ width: "250px", height: "150px", overflow: "hidden" }}>
+                <CardMedia
+                  component="img"
+                  height="auto"
+                  image={thumbnail}
+                  alt="No Image"
+                  sx={{ width: "100%", height: "100%", objectFit: "cover" }}
+                />
+              </Box>
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  {title}
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        ))}
+      </Box>
+    </>
   );
 };
 

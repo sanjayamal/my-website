@@ -6,19 +6,6 @@ import { skillList } from "./skillList";
 
 const Skills: React.FC = () => {
   return (
-    // <Box className="skill-container ">
-    //   {skillList.map(
-    //     ({
-    //       programmingLanguage,
-    //       rate,
-    //     }: {
-    //       programmingLanguage: string;
-    //       rate: number;
-    //     },index:number) => (
-    //       <SkillItem rate={rate} programmingLanguage={programmingLanguage} />
-    //     )
-    //   )}
-    // </Box>
     <Grid container spacing={2} className="skill-container">
       {skillList.map(
         (

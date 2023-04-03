@@ -11,6 +11,7 @@ import { InfoItem } from "./Components";
 import moment from "moment";
 import { ButtonWithIcon } from "../../Common";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
+import "./PersonalInfo.scss";
 
 const PersonalInfo: React.FC = () => {
   const $IconButton = styled(IconButton)(() => ({
@@ -38,29 +39,33 @@ const PersonalInfo: React.FC = () => {
         >
           PERSONAL INFOs
         </Typography>
-        <Grid container spacing={1} sx={{ padding: "30px" }}>
-          <Grid item xs={12} sm={6} sx={{ marginBottom: "10px" }}>
+        <Grid
+          container
+          spacing={1}
+          sx={{ padding: "30px", marginLeft: "45px" }}
+        >
+          <Grid item xs={12} sm={6} className="item">
             <InfoItem label="FRIST NAME" value="Rajitha" />
           </Grid>
-          <Grid item xs={12} sm={6} sx={{ marginBottom: "10px" }}>
+          <Grid item xs={12} sm={6} className="item">
             <InfoItem label="LAST NAME" value="Sanjayamal" />
           </Grid>
-          <Grid item xs={12} sm={6} sx={{ marginBottom: "10px" }}>
+          <Grid item xs={12} sm={6} className="item">
             <InfoItem
               label="AGE"
               value={`${moment().diff("1994-06-25", "years")} Years`}
             />
           </Grid>
-          <Grid item xs={12} sm={6} sx={{ marginBottom: "10px" }}>
+          <Grid item xs={12} sm={6} className="item">
             <InfoItem
               label="ADDRESS"
               value="Palagaspalatha,Parappuwa,Kosgoda"
             />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={6} className="item">
             <InfoItem label="EMAIL" value="rajithasanjayamal0918@gmail.com" />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={6} className="item">
             <InfoItem label="PHONE" value="+94717084765 / +94773664768" />
           </Grid>
           <ButtonWithIcon
