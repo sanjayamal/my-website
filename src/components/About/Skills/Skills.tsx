@@ -1,8 +1,8 @@
 import React from "react";
 import { SkillItem } from "./Components";
-import { Box, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
+import { skillList } from "./Constants/skillList";
 import "./skills.scss";
-import { skillList } from "./skillList";
 
 const Skills: React.FC = () => {
   return (

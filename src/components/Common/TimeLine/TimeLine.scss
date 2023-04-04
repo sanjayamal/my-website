@@ -5,7 +5,7 @@
 .timeline .timeline-title {
   padding-top: 7px;
   color: rgba(0, 0, 0, 0.54);
-  font-weight: 450;
+  font-weight: 700;
 }
 
 .timeline .timeline-header {
@@ -37,4 +37,20 @@
 .timeline .timeline-content {
   padding-top: 0px !important;
   margin-bottom: 20px;
+}
+
+.item-titile {
+  font-weight: 900 !important;
+}
+
+.item-date {
+  font-weight: 900 !important;
+}
+
+.item-description {
+  font-weight: 400 !important;
+}
+
+.item-content {
+  color: rgba(0, 0, 0, 0.54);
 }

@@ -49,7 +49,19 @@ export const skillList: Array<{ programmingLanguage: string; rate: number }> = [
     rate: 25,
   },
   {
+    programmingLanguage: "ANTD",
+    rate: 75,
+  },
+  {
+    programmingLanguage: "MATERIAL UI",
+    rate: 60,
+  },
+  {
     programmingLanguage: "GIT",
     rate: 70,
+  },
+  {
+    programmingLanguage: "FORMIK",
+    rate: 75,
   },
 ];
