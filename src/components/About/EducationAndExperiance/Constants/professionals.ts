@@ -1,10 +1,9 @@
-import { IEducationAndExperianceItem } from "../Interfaces";
+import { IEducationAndExperienceItem } from "../Interfaces";
 
-export const professionals: Array<IEducationAndExperianceItem> = [
+export const professionals: Array<IEducationAndExperienceItem> = [
   {
-    title: "Work 1",
-    date: "2011-2015",
-    description:
-      "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa hfsjhfsjhfsiajl a oaodap dskdjkdjfkjkjfkk",
+    title: "AZ - 900",
+    date: "2021",
+    description: "Microsoft Azure Fundamentals",
   },
 ];

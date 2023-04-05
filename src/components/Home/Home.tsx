@@ -13,6 +13,7 @@ import ForwardOutlinedIcon from "@mui/icons-material/ForwardOutlined";
 import { useNavigate } from "react-router-dom";
 import "./Home.scss";
 import { ButtonWithIcon, WithLoad } from "../Common";
+import moment from "moment";
 
 const Home: React.FC = () => {
   const navigation = useNavigate();
@@ -71,15 +72,22 @@ const Home: React.FC = () => {
                 Senoir Software Engineer
               </Typography>
             </Stack>
-            <Typography align="right" paragraph={true}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
-              quam cupiditate amet nam minus incidunt blanditiis rerum corrupti
-              delectus dolore, maiores, ipsam nihil sapiente consequatur ratione
-              impedit quos eveniet assumenda. Lorem ipsum dolor sit, amet
-              consectetur adipisicing elit. Voluptatem mollitia enim
-              perspiciatis harum explicabo, quos et debitis inventore
-              consequatur ad accusantium in soluta quod necessitatibus dolor
-              saepe perferendis. Obcaecati, voluptates?
+            <Typography
+              align="right"
+              paragraph={true}
+              sx={{
+                color: "#766f6f",
+                marginLeft: "-7px !important",
+                marginBottom: "10px !important",
+              }}
+            >
+              {`I'm a full stack developer a passion for creating innovative and functional 
+            web application. My expertise includes both front-end and backend development, as well as
+            experience with various web development frameworks and technologies over ${moment().diff(
+              "2020-01-01",
+              "years"
+            )}
+            years in IT industry. Take a look around and feel free to contact me.`}
             </Typography>
           </Stack>
           <Box

@@ -95,7 +95,7 @@ const SideBar: React.FC = () => {
           alignItems: "flex-end",
         }}
       >
-        <Box>
+        {/* <Box>
           {isSunny && (
             <IconButton
               aria-label="moon"
@@ -112,8 +112,8 @@ const SideBar: React.FC = () => {
               <LightModeOutlinedIcon />
             </IconButton>
           )}
-        </Box>
-        <Box>{generateList(RouteConfigs)}</Box>
+        </Box> */}
+        <Box className="list-item">{generateList(RouteConfigs)}</Box>
       </Stack>
     </Box>
   );

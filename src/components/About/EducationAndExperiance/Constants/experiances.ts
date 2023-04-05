@@ -1,22 +1,22 @@
-import { IEducationAndExperianceItem } from "../Interfaces";
+import { IEducationAndExperienceItem } from "../Interfaces";
 
-export const experiances: Array<IEducationAndExperianceItem> = [
+export const experiences: Array<IEducationAndExperienceItem> = [
   {
-    title: "Work 1",
-    date: "2011-2015",
+    title: "SENIOR SOFTWARE ENGINEER - Conceptvines",
+    date: "2022 (NOV)- PRESENT",
     description:
-      "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa hfsjhfsjhfsiajl a oaodap dskdjkdjfkjkjfkk",
+      "Responsible for developing the features for Credential management system which is called as Cowrie using React and Go.",
   },
   {
-    title: "Work 2",
-    date: "2011-2015",
-    description:
-      "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa hfsjhfsjhfsiajl a oaodap dskdjkdjfkjkjfkk",
+    title: "SOFTWARE ENGINEER -  Unicorn Solution (Pvt) Ltd",
+    date: "2020 (MAY) -2022 (NOV)",
+    description: `Responsible for developing the features for Credit management system known as UnicornBox4.0 using React 
+    Azure function with Asp.Net core. And involved to design React Component and APIs for user stories.`,
   },
   {
-    title: "Work 2",
-    date: "2011-2015",
-    description:
-      "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa hfsjhfsjhfsiajl a oaodap dskdjkdjfkjkjfkk",
+    title: "TRAINEE SOFTWARE ENGINEER - Unicorn Solution (Pvt) Ltd",
+    date: "2018 (AUG) -2019 (MAR)",
+    description: `Responsible for optimizing and fixing issues in Human Resource management system  called as 
+      USRMS which is used in company itself.`,
   },
 ];

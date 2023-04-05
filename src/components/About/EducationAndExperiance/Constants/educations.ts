@@ -1,10 +1,9 @@
-import { IEducationAndExperianceItem } from "../Interfaces";
+import { IEducationAndExperienceItem } from "../Interfaces";
 
-export const educations: Array<IEducationAndExperianceItem> = [
+export const educations: Array<IEducationAndExperienceItem> = [
   {
-    title: "Work 1",
-    date: "2011-2015",
-    description:
-      "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa hfsjhfsjhfsiajl a oaodap dskdjkdjfkjkjfkk",
+    title: "UNIVERSITY OF MORATUWA",
+    date: "2016 - 2020",
+    description: "BSc (Hons.) in Information Technology",
   },
 ];

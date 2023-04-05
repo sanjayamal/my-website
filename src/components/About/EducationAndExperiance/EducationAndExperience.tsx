@@ -4,16 +4,16 @@ import { $TimeLine } from "../../Common";
 import WorkOutlinedIcon from "@mui/icons-material/WorkOutlined";
 import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
 import HistoryEduOutlinedIcon from "@mui/icons-material/HistoryEduOutlined";
-import { experiances, professionals, educations } from "./Constants";
+import { experiences, professionals, educations } from "./Constants";
 
-const EducationAndExperiance: React.FC = () => {
+const EducationAndExperience: React.FC = () => {
   return (
     <Grid container spacing={2} sx={{ marginLeft: "65px !important" }}>
       <Grid item xs={12} md={6}>
         <$TimeLine
-          title="WORK EXPERINCE"
+          title="WORK EXPERIENCE"
           icon={<WorkOutlinedIcon />}
-          data={experiances}
+          data={experiences}
         />
       </Grid>
       <Grid item xs={12} md={6}>
@@ -38,4 +38,4 @@ const EducationAndExperiance: React.FC = () => {
   );
 };
 
-export default EducationAndExperiance;
+export default EducationAndExperience;

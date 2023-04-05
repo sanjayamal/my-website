@@ -3,7 +3,7 @@ import { PageTitle, WithLoad } from "../Common";
 import { Stack } from "@mui/material";
 import { PersonalInfo } from "./PersonalInfo";
 import { Skills } from "./Skills";
-import { EducationAndExperiance } from "./EducationAndExperiance";
+import { EducationAndExperience } from "./EducationAndExperiance";
 
 const About: React.FC = () => {
   return (
@@ -12,7 +12,7 @@ const About: React.FC = () => {
       <Stack spacing={3}>
         <PersonalInfo />
         <Skills />
-        <EducationAndExperiance />
+        <EducationAndExperience />
       </Stack>
     </>
   );
