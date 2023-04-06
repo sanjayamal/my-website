@@ -55,14 +55,77 @@ const Home: React.FC = () => {
         </Grid>
       </Box>
       <Box className="box-item">
-        <Stack spacing={1}>
+        <Grid container direction="column" alignItems="flex-end">
+          <Grid item>
+            <Typography
+              variant={isSmallScreen ? "h5" : "h4"}
+              align="right"
+              color="#ffcc00"
+              fontWeight={800}
+            >
+              I'm Rajitha Sanjayamal
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Typography
+              variant={isSmallScreen ? "caption" : "h6"}
+              gutterBottom
+              align="right"
+              fontWeight={500}
+              color="#766f6f"
+            >
+              Senior Software Engineer
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Typography
+              align="right"
+              variant={isSmallScreen ? "body2" : "body1"}
+              paragraph={true}
+              sx={{
+                color: "#766f6f",
+                marginLeft: "-7px !important",
+                marginBottom: "10px !important",
+              }}
+            >
+              {`I'm a full stack developer a passion for creating innovative and functional 
+            web application. My expertise includes both front-end and backend development, as well as
+            experience with various web development frameworks and technologies over ${moment().diff(
+              "2020-01-01",
+              "years"
+            )}
+            years in IT industry. Take a look around and feel free to contact me.`}
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "flex-end",
+              }}
+            >
+              <ButtonWithIcon
+                variant="outlined"
+                endIcon={
+                  <$IconButton aria-label="more">
+                    <ForwardOutlinedIcon />
+                  </$IconButton>
+                }
+                onClick={handleMoreAbout}
+              >
+                More About Me
+              </ButtonWithIcon>
+            </Box>
+          </Grid>
+        </Grid>
+        {/* <Stack spacing={1}>
           <Stack
             sx={{
               maxWidth: 400,
             }}
             spacing={1}
           >
-            <Stack spacing={0} sx={{ marginTop: "10px" }}>
+            <Stack spacing={0}>
               <Typography
                 variant={isSmallScreen ? "h5" : "h4"}
                 align="right"
@@ -118,7 +181,7 @@ const Home: React.FC = () => {
               More About Me
             </ButtonWithIcon>
           </Box>
-        </Stack>
+        </Stack> */}
       </Box>
     </Box>
   );
