@@ -8,7 +8,7 @@ import { experiences, professionals, educations } from "./Constants";
 
 const EducationAndExperience: React.FC = () => {
   return (
-    <Grid container spacing={2} sx={{ marginLeft: "65px !important" }}>
+    <Grid container spacing={2} sx={{ marginLeft: "10% !important" }}>
       <Grid item xs={12} md={6}>
         <$TimeLine
           title="WORK EXPERIENCE"

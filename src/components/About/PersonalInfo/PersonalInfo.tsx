@@ -39,13 +39,9 @@ const PersonalInfo: React.FC = () => {
         >
           PERSONAL INFOs
         </Typography>
-        <Grid
-          container
-          spacing={1}
-          sx={{ padding: "30px", marginLeft: "45px" }}
-        >
+        <Grid container spacing={1} sx={{ padding: "3%", marginLeft: "10%" }}>
           <Grid item xs={12} sm={6} className="item">
-            <InfoItem label="FRIST NAME" value="Rajitha" />
+            <InfoItem label="FIRST NAME" value="Rajitha" />
           </Grid>
           <Grid item xs={12} sm={6} className="item">
             <InfoItem label="LAST NAME" value="Sanjayamal" />
@@ -120,7 +116,7 @@ const PersonalInfo: React.FC = () => {
                 }}
                 variant="h6"
               >
-                YEARS OF EXPERIANCE
+                YEARS OF EXPERIENCE
               </Typography>
             </CardContent>
           </Card>

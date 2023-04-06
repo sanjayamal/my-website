@@ -8,6 +8,8 @@ import {
   Stack,
   IconButton,
   styled,
+  useMediaQuery,
+  Grid,
 } from "@mui/material";
 import ForwardOutlinedIcon from "@mui/icons-material/ForwardOutlined";
 import { useNavigate } from "react-router-dom";
@@ -20,6 +22,9 @@ const Home: React.FC = () => {
   const handleMoreAbout = () => {
     navigation("/about");
   };
+  const isSmallScreen = useMediaQuery((theme: any) =>
+    theme.breakpoints.down("sm")
+  );
   const $IconButton = styled(IconButton)(() => ({
     margin: "0px -11px 0 5px",
     backgroundColor: "#ffcc00",
@@ -28,22 +33,26 @@ const Home: React.FC = () => {
   return (
     <Box className="home-container">
       <Box className="box-item">
-        <Card
-          sx={{
-            maxWidth: 350,
-            borderRadius: "25px",
-            borderTop: 1,
-            borderBottom: 1,
-            borderColor: "#ffcc00",
-            borderWidth: "6px",
-          }}
-        >
-          <CardMedia
-            sx={{ height: "100%", objectFit: "cover" }}
-            image={`${process.env.PUBLIC_URL}/assets/images/profilePic.jpg`}
-            component="img"
-          />
-        </Card>
+        <Grid container spacing={2} sx={{ justifyContent: "center" }}>
+          <Grid item xs={12} md={8} lg={8}>
+            <Card
+              sx={{
+                height: "auto",
+                borderRadius: "25px",
+                borderTop: 1,
+                borderBottom: 1,
+                borderColor: "#ffcc00",
+                borderWidth: "6px",
+              }}
+            >
+              <CardMedia
+                sx={{ height: "100%", objectFit: "cover", maxWidth: "100%" }}
+                image={`${process.env.PUBLIC_URL}/assets/images/profilePic.jpg`}
+                component="img"
+              />
+            </Card>
+          </Grid>
+        </Grid>
       </Box>
       <Box className="box-item">
         <Stack spacing={1}>
@@ -53,9 +62,9 @@ const Home: React.FC = () => {
             }}
             spacing={1}
           >
-            <Stack spacing={0}>
+            <Stack spacing={0} sx={{ marginTop: "10px" }}>
               <Typography
-                variant="h4"
+                variant={isSmallScreen ? "h5" : "h4"}
                 align="right"
                 color="#ffcc00"
                 fontWeight={800}
@@ -63,17 +72,18 @@ const Home: React.FC = () => {
                 I'm Rajitha Sanjayamal
               </Typography>
               <Typography
-                variant="h5"
+                variant={isSmallScreen ? "caption" : "h6"}
                 gutterBottom
                 align="right"
                 fontWeight={500}
                 color="#766f6f"
               >
-                Senoir Software Engineer
+                Senior Software Engineer
               </Typography>
             </Stack>
             <Typography
               align="right"
+              variant={isSmallScreen ? "body2" : "body1"}
               paragraph={true}
               sx={{
                 color: "#766f6f",
