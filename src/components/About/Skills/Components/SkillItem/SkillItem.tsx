@@ -6,8 +6,9 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
 const SkillItem = (
-  props: CircularProgressProps & { programmingLanguage: string; rate: number }
+  props: CircularProgressProps & { language: string; rate: number }
 ) => {
+  const {language,rate}=props
   return (
     <>
       <Box
@@ -21,7 +22,7 @@ const SkillItem = (
           {...props}
           size={100}
           sx={{ color: "#ffcc00" }}
-          value={props.rate}
+          value={rate}
         />
         <Box
           sx={{
@@ -50,10 +51,9 @@ const SkillItem = (
             display: "flex",
             justifyContent: "flex-start",
             alignItems: "center",
-            marginLeft: "20px",
           }}
         >
-          {props.programmingLanguage}
+          {language}
         </Typography>
       </Box>
     </>

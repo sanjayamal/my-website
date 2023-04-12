@@ -58,6 +58,7 @@ const SideBar: React.FC = () => {
       return location.pathname.toLowerCase() === path.toLowerCase();
     }
   };
+
   function generateList(items: Array<IRouteConfigs>) {
     return (
       <List sx={{ mt: 4 }}>
@@ -85,7 +86,7 @@ const SideBar: React.FC = () => {
       sx={{
         flex: "5%",
         padding: "2px",
-        minWidth: `${isSmallScreen ? "70px" : "130px"}`,
+        minWidth: `${isSmallScreen ? "80px" : "130px"}`,
       }}
     >
       <Stack

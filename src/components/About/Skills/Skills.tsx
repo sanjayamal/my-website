@@ -18,8 +18,21 @@ const Skills: React.FC = () => {
           },
           index: number
         ) => (
-          <Grid key={index} item xs={12} sm={6} md={4} lg={3}>
-            <SkillItem rate={rate} programmingLanguage={programmingLanguage} />
+          <Grid
+            key={index}
+            item
+            xs={12}
+            sm={6}
+            md={4}
+            lg={3}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              flexDirection: "column",
+            }}
+          >
+            <SkillItem rate={rate} language={programmingLanguage} />
           </Grid>
         )
       )}

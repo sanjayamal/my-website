@@ -39,7 +39,11 @@ const PersonalInfo: React.FC = () => {
         >
           PERSONAL INFOs
         </Typography>
-        <Grid container spacing={1} sx={{ padding: "3%", marginLeft: "10%" }}>
+        <Grid
+          container
+          spacing={1}
+          sx={{ padding: "3%", marginLeft: "10%", minWidth: "280px" }}
+        >
           <Grid item xs={12} sm={6} className="item">
             <InfoItem label="FIRST NAME" value="Rajitha" />
           </Grid>

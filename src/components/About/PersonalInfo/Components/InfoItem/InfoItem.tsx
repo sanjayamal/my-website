@@ -7,7 +7,7 @@ interface IInfoItem {
 }
 const InfoItem: React.FC<IInfoItem> = ({ value, label }) => {
   return (
-    <Box>
+    <Box sx={{ margin: "1px" }}>
       <Typography sx={{ color: "rgba(0, 0, 0, 0.54)" }}>{label}</Typography>
       <Typography sx={{ color: "rgba(0, 0, 0, 0.54)", fontWeight: "450" }}>
         {value}

@@ -35,8 +35,8 @@ const $TimeLine: React.FC<ITimeLine> = ({ title, icon, data }) => {
           </Typography>
         </TimelineContent>
       </TimelineItem>
-      {data.map(({ title, date, description }: ITimeLineData) => (
-        <TimelineItem>
+      {data.map(({ title, date, description }: ITimeLineData,index:number) => (
+        <TimelineItem key={index}>
           <$TimeLineSeparator />
           <TimelineContent className="item-content">
             <Typography className="item-titile">{title}</Typography>
