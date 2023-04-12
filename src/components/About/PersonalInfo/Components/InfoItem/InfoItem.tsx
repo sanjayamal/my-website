@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React from "react";
 
 interface IInfoItem {
@@ -7,12 +7,12 @@ interface IInfoItem {
 }
 const InfoItem: React.FC<IInfoItem> = ({ value, label }) => {
   return (
-    <Typography sx={{ color: "rgba(0, 0, 0, 0.54)" }}>
-      {label} :{" "}
-      <span style={{ color: "rgba(0, 0, 0, 0.54)", fontWeight: "450" }}>
+    <Box>
+      <Typography sx={{ color: "rgba(0, 0, 0, 0.54)" }}>{label}</Typography>
+      <Typography sx={{ color: "rgba(0, 0, 0, 0.54)", fontWeight: "450" }}>
         {value}
-      </span>
-    </Typography>
+      </Typography>
+    </Box>
   );
 };
 
