@@ -74,7 +74,7 @@ const Home: React.FC = () => {
               fontWeight={500}
               color="#766f6f"
             >
-              Senior Software Engineer
+              Full-Stack Developer
             </Typography>
           </Grid>
           <Grid item>

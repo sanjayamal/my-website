@@ -55,7 +55,6 @@ const Blogs: React.FC = () => {
           flexWrap: "wrap",
           gap: "10px",
           margin: "10px",
-          justifyContent: "center",
         }}
       >
         {isLoading && <CardSkeleton />}

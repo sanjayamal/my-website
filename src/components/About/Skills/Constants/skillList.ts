@@ -33,7 +33,7 @@ export const skillList: Array<{ programmingLanguage: string; rate: number }> = [
   },
 
   {
-    programmingLanguage: "C#",
+    programmingLanguage: "DOTNET CORE",
     rate: 30,
   },
   {
@@ -63,5 +63,22 @@ export const skillList: Array<{ programmingLanguage: string; rate: number }> = [
   {
     programmingLanguage: "FORMIK",
     rate: 75,
+  },
+  
+  {
+    programmingLanguage: "PYTHON",
+    rate: 30,
+  },
+  {
+    programmingLanguage: "AWS",
+    rate: 30,
+  },
+  {
+    programmingLanguage: "LANGCHAIN",
+    rate: 40,
+  },
+  {
+    programmingLanguage: "PINECONE",
+    rate: 30,
   },
 ];
