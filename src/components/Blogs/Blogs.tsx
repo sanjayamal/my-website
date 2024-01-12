@@ -46,6 +46,12 @@ const Blogs: React.FC = () => {
     window.open(link, "_blank", "noopener,noreferrer");
   };
 
+  const thumbnailURL = (content: string) => {
+    const regex = /<img[^>]+src="(https:\/\/[^">]+)"/g;
+    const imagePaths = regex.exec(content);
+    return imagePaths ? imagePaths[1] : "";
+  };
+
   return (
     <>
       <PageTitle title="MY BLOGS" />
@@ -58,30 +64,38 @@ const Blogs: React.FC = () => {
         }}
       >
         {isLoading && <CardSkeleton />}
-        {items.map(({ title, thumbnail, link }: IMediumItem, index: number) => (
-          <Card
-            sx={{ width: "250px", backgroundColor: "#f0f0e8", height: "auto" }}
-            key={index}
-            onClick={() => onClick(link)}
-          >
-            <CardActionArea>
-              <Box sx={{ width: "250px", height: "150px", overflow: "hidden" }}>
-                <CardMedia
-                  component="img"
-                  height="auto"
-                  image={thumbnail}
-                  alt="No Image"
-                  sx={{ width: "100%", height: "100%", objectFit: "cover" }}
-                />
-              </Box>
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
-                  {title}
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
-        ))}
+        {items.map(
+          ({ title, thumbnail, link, content }: IMediumItem, index: number) => (
+            <Card
+              sx={{
+                width: "250px",
+                backgroundColor: "#f0f0e8",
+                height: "auto",
+              }}
+              key={index}
+              onClick={() => onClick(link)}
+            >
+              <CardActionArea>
+                <Box
+                  sx={{ width: "250px", height: "150px", overflow: "hidden" }}
+                >
+                  <CardMedia
+                    component="img"
+                    height="auto"
+                    image={thumbnailURL(content)}
+                    alt="blog image"
+                    sx={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  />
+                </Box>
+                <CardContent>
+                  <Typography gutterBottom variant="h6" component="div">
+                    {title}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          )
+        )}
       </Box>
     </>
   );

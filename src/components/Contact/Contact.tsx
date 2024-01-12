@@ -239,7 +239,7 @@ const Contact: React.FC = () => {
                 rajithasanjayamal0918@gmail.com
               </Typography>
             </Box>
-            <Box>
+            {/* <Box>
               <Chip
                 icon={<CallOutlinedIcon />}
                 label="CALL ME"
@@ -249,7 +249,7 @@ const Contact: React.FC = () => {
               <Typography className="info-item">
                 +94717084765 / +94773664768
               </Typography>
-            </Box>
+            </Box> */}
             <Box
               sx={{
                 display: "flex",

@@ -3,6 +3,7 @@ import HouseOutlinedIcon from "@mui/icons-material/HouseOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import ArticleOutlinedIcon from "@mui/icons-material/ArticleOutlined";
 import ContactMailOutlinedIcon from "@mui/icons-material/ContactMailOutlined";
+import AppsOutlinedIcon from "@mui/icons-material/AppsOutlined";
 import { IconButton, styled } from "@mui/material";
 
 export interface IRouteConfigs {
@@ -29,6 +30,16 @@ export const RouteConfigs: Array<IRouteConfigs> = [
   },
   {
     key: 2,
+    name: BarItem.Project,
+    path: "/projects",
+    icon: (
+      <$IconButton aria-label="project">
+        <AppsOutlinedIcon />
+      </$IconButton>
+    ),
+  },
+  {
+    key: 3,
     name: BarItem.About,
     path: "/about",
     icon: (
@@ -38,7 +49,7 @@ export const RouteConfigs: Array<IRouteConfigs> = [
     ),
   },
   {
-    key: 3,
+    key: 4,
     name: BarItem.Blogs,
     path: "/blogs",
     icon: (
@@ -48,7 +59,7 @@ export const RouteConfigs: Array<IRouteConfigs> = [
     ),
   },
   {
-    key: 4,
+    key: 5,
     name: BarItem.Contact,
     path: "/contact",
     icon: (
