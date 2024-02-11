@@ -222,10 +222,8 @@ const Contact: React.FC = () => {
                 variant="outlined"
                 sx={{ color: "#ffcc00", border: "none", fontSize: "18px" }}
               />
-              <Typography className="info-item">
-                Palagaspalatha, Parappuwa,
-              </Typography>
-              <Typography className="info-item">Kosgoda</Typography>
+              <Typography className="info-item">Elpitiya, Galle</Typography>
+              <Typography className="info-item">Galle</Typography>
               <Typography className="info-item">Sri Lanka</Typography>
             </Box>
             <Box>

@@ -28,43 +28,41 @@ const Project: React.FC<IProject> = ({
 }) => {
   return (
     <Card>
-      <CardActionArea>
-        <CardContent>
-          <Typography gutterBottom variant="h5">
-            {link ? (
-              <Link href={link} underline="hover" color="inherit">
-                {name}
-              </Link>
-            ) : (
-              <> {name}</>
-            )}
+      <CardContent>
+        <Typography gutterBottom variant="h5">
+          {link ? (
+            <Link href={link} underline="hover" color="inherit">
+              {name}
+            </Link>
+          ) : (
+            <> {name}</>
+          )}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {description}
+        </Typography>
+        <Box
+          sx={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "4px",
+            paddingTop: "8px",
+          }}
+        >
+          {technologies.map((tech, index) => (
+            <Chip color="info" label={tech} key={index} variant="outlined" />
+          ))}
+        </Box>
+      </CardContent>
+      {repoLink && (
+        <CardActions>
+          <Typography gutterBottom variant="subtitle2">
+            <Link href={repoLink} underline="hover" color="primary">
+              Repository
+            </Link>
           </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {description}
-          </Typography>
-          <Box
-            sx={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: "4px",
-              paddingTop: "8px",
-            }}
-          >
-            {technologies.map((tech, index) => (
-              <Chip color="info" label={tech} key={index} variant="outlined" />
-            ))}
-          </Box>
-        </CardContent>
-        {repoLink && (
-          <CardActions>
-            <Typography gutterBottom variant="subtitle2">
-              <Link href={repoLink} underline="hover" color="primary">
-                Repository
-              </Link>
-            </Typography>
-          </CardActions>
-        )}
-      </CardActionArea>
+        </CardActions>
+      )}
     </Card>
   );
 };

@@ -6,7 +6,7 @@ export const BarItem = {
   Project: "Projects",
 };
 
-export const PROJECTS = [
+export const COMPANY_PROJECTS = [
   {
     name: "Cowrie",
     description:
@@ -58,6 +58,9 @@ export const PROJECTS = [
     link: "https://unicorn-solutions.com/",
     repoLink: "",
   },
+];
+
+export const PERSONAL_PROJECTS = [
   {
     name: "Mr.Chatbot",
     description:
@@ -89,7 +92,23 @@ export const PROJECTS = [
       "OpenAI",
       "Firebase services",
     ],
-    link: "https://moviesgpt-1daa4.web.app/",
+    link: "https://netflix-gpt-mauve.vercel.app/",
     repoLink: "https://github.com/sanjayamal/netflix-gpt",
+  },
+  {
+    name: "Daiqri",
+    description:
+      "Daiqri is event management platform which a comprehensive solution designed to streamline and enhance every aspect of your event managing process",
+    technologies: [
+      "NextJs",
+      "Shadcn UI",
+      "Uploadthing",
+      "Clerk",
+      "Typescript",
+      "MongoDB",
+      "Vercel",
+    ],
+    link: "https://evently-psi-bay.vercel.app/",
+    repoLink: "https://github.com/sanjayamal/evently",
   },
 ];
