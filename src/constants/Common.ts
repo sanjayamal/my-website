@@ -90,15 +90,15 @@ export const PERSONAL_PROJECTS = [
       "Redux-toolkit",
       "Tailwind CSS",
       "OpenAI",
-      "Firebase services",
+      "Vercel services",
     ],
     link: "https://netflix-gpt-mauve.vercel.app/",
     repoLink: "https://github.com/sanjayamal/netflix-gpt",
   },
   {
-    name: "Daiqri",
+    name: "Evently",
     description:
-      "Daiqri is event management platform which a comprehensive solution designed to streamline and enhance every aspect of your event managing process",
+      "Evently is event management platform which a comprehensive solution designed to streamline and enhance every aspect of your event managing process",
     technologies: [
       "NextJs",
       "Shadcn UI",
@@ -106,7 +106,7 @@ export const PERSONAL_PROJECTS = [
       "Clerk",
       "Typescript",
       "MongoDB",
-      "Vercel",
+      "Vercel services",
     ],
     link: "https://evently-psi-bay.vercel.app/",
     repoLink: "https://github.com/sanjayamal/evently",
